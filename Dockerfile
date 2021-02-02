@@ -11,8 +11,8 @@ RUN set -x \
   && echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
   \
   # Add the packages
-  && apk add --no-cache dumb-init curl make gcc g++ linux-headers binutils-gold gnupg libstdc++ nss chromium \
-  && apk add --no-cache git vim \
+  && apk add --no-cache dumb-init dbus curl make gcc g++ linux-headers binutils-gold gnupg libstdc++ nss chromium \
+  && apk add --no-cache git vim freetype ttf-freefont font-noto-emoji font-noto-cjk \
   \
   # Cleanup
   && rm -rf /var/cache/apk/* /usr/share/man /tmp/*
