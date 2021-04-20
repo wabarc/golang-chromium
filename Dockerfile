@@ -14,6 +14,9 @@ RUN set -x \
   && apk add --no-cache dumb-init dbus curl make gcc g++ linux-headers binutils-gold gnupg libstdc++ nss chromium \
   && apk add --no-cache git vim freetype ttf-freefont font-noto-emoji font-noto-cjk \
   \
+  && ln -sf /usr/bin/chromium-browser /usr/bin/chromium \
+  && ln -sf /usr/bin/chromium-browser /usr/bin/chrome \
+  \
   # Cleanup
   && rm -rf /var/cache/apk/* /usr/share/man /tmp/*
 
