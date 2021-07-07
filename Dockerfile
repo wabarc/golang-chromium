@@ -12,7 +12,7 @@ RUN set -x \
   \
   # Add the packages
   && apk add --no-cache dumb-init dbus curl make gcc g++ linux-headers binutils-gold gnupg libstdc++ nss chromium \
-  && apk add --no-cache git vim freetype ttf-freefont font-noto-emoji font-noto-cjk \
+  && apk add --no-cache git vim tor wget ca-certificates libressl freetype ttf-freefont font-noto-emoji font-noto-cjk \
   \
   && ln -sf /usr/bin/chromium-browser /usr/bin/chromium \
   && ln -sf /usr/bin/chromium-browser /usr/bin/chrome \
