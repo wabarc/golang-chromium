@@ -27,7 +27,7 @@ jobs:
           fi
           TAGS="${TAGS},${DOCKER_IMAGE_SCOPE}:${DOCKER_IMAGE_VERSION}"
 
-          echo ::set-output name=tags::${TAGS#,}
+          echo "tags=${TAGS#,}" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
